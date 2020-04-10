@@ -151,3 +151,7 @@ Parse apache log from remote server with `common` format
     | /xxxxx/                                  |      14 |            0.000 |     0 |    14 |     0 |     0 |
     | /xxxxxxxxxx/xxxxxxxx/xxxxx               |      13 |        20530.154 |    13 |     0 |     0 |     0 |
 
+License
+-------
+
+SPDX-License-Identifier: `MIT <LICENSE>`_
