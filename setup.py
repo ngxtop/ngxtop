@@ -8,8 +8,8 @@ setup(
     license='MIT',
 
     url='https://github.com/lebinh/ngxtop',
-    author='Binh Le',
-    author_email='lebinh.it@gmail.com',
+    author='Lucas Ramage',
+    author_email='ramage.lucas@protonmail.com',
 
     classifiers=[
         'Development Status :: 4 - Beta',
