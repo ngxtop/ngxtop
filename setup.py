@@ -7,7 +7,7 @@ setup(
     long_description=open('README.rst').read(),
     license='MIT',
 
-    url='https://github.com/lebinh/ngxtop',
+    url='https://github.com/ngxtop/ngxtop',
     author='Lucas Ramage',
     author_email='ramage.lucas@protonmail.com',
 
