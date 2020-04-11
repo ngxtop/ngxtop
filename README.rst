@@ -18,9 +18,11 @@ See sample usages below for some ideas about what you can do with it.
 Installation
 ------------
 
+.. image:: https://img.shields.io/pypi/v/ngxtop-ce?style=flat-square   :alt: PyPI
+
 ::
 
-    pip install ngxtop
+    pip install ngxtop-ce
 
 
 Note: ``ngxtop`` is primarily developed and tested with python2 but also supports python3.
