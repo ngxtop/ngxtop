@@ -25,8 +25,6 @@ Installation
     pip install ngxtop-ce
 
 
-Note: ``ngxtop`` is primarily developed and tested with python2 but also supports python3.
-
 Usage
 -----
 
