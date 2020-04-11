@@ -156,4 +156,4 @@ Parse apache log from remote server with `common` format
 License
 -------
 
-SPDX-License-Identifier: `MIT <LICENSE>`_
+SPDX-License-Identifier: `MIT <https://spdx.org/licenses/MIT.html>`_
