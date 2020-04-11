@@ -55,7 +55,7 @@ Examples:
     Analyze apache access log from remote machine using 'common' log format
     $ ssh remote tail -f /var/log/apache2/access.log | ngxtop -f common
 """
-from __future__ import print_function
+
 import atexit
 from contextlib import closing
 import curses
@@ -67,7 +67,7 @@ import sys
 import signal
 
 try:
-    import urlparse
+    import urllib.parse
 except ImportError:
     import urllib.parse as urlparse
 
@@ -167,7 +167,7 @@ def parse_request_path(record):
         uri = ' '.join(record['request'].split(' ')[1:-1])
     else:
         uri = None
-    return urlparse.urlparse(uri).path if uri else None
+    return urllib.parse.urlparse(uri).path if uri else None
 
 
 def parse_status_type(record):
