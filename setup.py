@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='ngxtop-ce',
-    version='0.0.3',
+    version='0.0.3a1',
     description='Real-time metrics for nginx server',
     long_description=open('README.rst').read(),
     license='MIT',
@@ -23,6 +23,7 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.2',
         'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.7',
     ],
     keywords='cli monitoring nginx system',
 
