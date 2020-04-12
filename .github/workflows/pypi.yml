@@ -24,7 +24,6 @@ jobs:
         TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
         TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
       run: |
-        git fetch --depth=500
-        GIT_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)
         python setup.py sdist bdist_wheel
-        twine upload dist/ngxtop-ce-${GIT_TAG}*
+        twine upload dist/*
+
