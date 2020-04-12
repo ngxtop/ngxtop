@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='ngxtop-ce',
-    version='0.0.3a5',
+    version='0.0.3a6',
     description='Real-time metrics for nginx server',
     long_description=open('README.rst').read(),
     license='MIT',
