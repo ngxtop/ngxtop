@@ -2,7 +2,7 @@ from ngxtop import config_parser
 
 
 def test_get_log_formats():
-    config = '''
+    config = """
         http {
             # ubuntu default, log_format on multiple lines
             log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
@@ -12,15 +12,15 @@ def test_get_log_formats():
             # name can also be quoted, and format don't always have to
             log_format  'te st'  $remote_addr;
         }
-    '''
+    """
     formats = dict(config_parser.get_log_formats(config))
-    assert 'main' in formats
-    assert "'$http_referer'" in formats['main']
-    assert 'te st' in formats
+    assert "main" in formats
+    assert "'$http_referer'" in formats["main"]
+    assert "te st" in formats
 
 
 def test_get_access_logs_no_format():
-    config = '''
+    config = """
         http {
             # ubuntu default
             access_log /var/log/nginx/access.log;
@@ -38,23 +38,23 @@ def test_get_access_logs_no_format():
                 }
             }
         }
-    '''
+    """
     logs = dict(config_parser.get_access_logs(config))
     assert len(logs) == 2
-    assert logs['/var/log/nginx/access.log'] == 'combined'
-    assert logs['/path/to/log'] == 'combined'
+    assert logs["/var/log/nginx/access.log"] == "combined"
+    assert logs["/path/to/log"] == "combined"
 
 
 def test_access_logs_with_format_name():
-    config = '''
+    config = """
         http {
             access_log /path/to/main.log main gzip=5 buffer=32k flush=1m;
             server {
                 access_log /path/to/test.log 'te st';
             }
         }
-    '''
+    """
     logs = dict(config_parser.get_access_logs(config))
     assert len(logs) == 2
-    assert logs['/path/to/main.log'] == 'main'
-    assert logs['/path/to/test.log'] == 'te st'
+    assert logs["/path/to/main.log"] == "main"
+    assert logs["/path/to/test.log"] == "te st"
